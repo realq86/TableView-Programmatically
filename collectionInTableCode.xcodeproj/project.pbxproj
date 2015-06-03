@@ -14,6 +14,8 @@
 		1433401C1B1F867700C5A2F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1433401B1B1F867700C5A2F5 /* Images.xcassets */; };
 		1433401F1B1F867700C5A2F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1433401D1B1F867700C5A2F5 /* LaunchScreen.xib */; };
 		1433402B1B1F867700C5A2F5 /* collectionInTableCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433402A1B1F867700C5A2F5 /* collectionInTableCodeTests.m */; };
+		143340361B1F88B000C5A2F5 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143340351B1F88B000C5A2F5 /* Launch Screen.xib */; };
+		1433403B1B1F8A3A00C5A2F5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1433403A1B1F8A3A00C5A2F5 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		143340241B1F867700C5A2F5 /* collectionInTableCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collectionInTableCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		143340291B1F867700C5A2F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1433402A1B1F867700C5A2F5 /* collectionInTableCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = collectionInTableCodeTests.m; sourceTree = "<group>"; };
+		143340351B1F88B000C5A2F5 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "Images.xcassets/Launch Screen.xib"; sourceTree = "<group>"; };
+		143340391B1F8A0A00C5A2F5 /* collectionInTableCode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "collectionInTableCode-Prefix.pch"; sourceTree = "<group>"; };
+		1433403A1B1F8A3A00C5A2F5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 		143340021B1F867700C5A2F5 = {
 			isa = PBXGroup;
 			children = (
+				1433403A1B1F8A3A00C5A2F5 /* Default-568h@2x.png */,
 				1433400D1B1F867700C5A2F5 /* collectionInTableCode */,
 				143340271B1F867700C5A2F5 /* collectionInTableCodeTests */,
 				1433400C1B1F867700C5A2F5 /* Products */,
@@ -87,6 +93,7 @@
 				143340161B1F867700C5A2F5 /* ViewController.m */,
 				143340181B1F867700C5A2F5 /* Main.storyboard */,
 				1433401B1B1F867700C5A2F5 /* Images.xcassets */,
+				143340351B1F88B000C5A2F5 /* Launch Screen.xib */,
 				1433401D1B1F867700C5A2F5 /* LaunchScreen.xib */,
 				1433400E1B1F867700C5A2F5 /* Supporting Files */,
 			);
@@ -98,6 +105,7 @@
 			children = (
 				1433400F1B1F867700C5A2F5 /* Info.plist */,
 				143340101B1F867700C5A2F5 /* main.m */,
+				143340391B1F8A0A00C5A2F5 /* collectionInTableCode-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,7 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1433401A1B1F867700C5A2F5 /* Main.storyboard in Resources */,
+				143340361B1F88B000C5A2F5 /* Launch Screen.xib in Resources */,
 				1433401F1B1F867700C5A2F5 /* LaunchScreen.xib in Resources */,
+				1433403B1B1F8A3A00C5A2F5 /* Default-568h@2x.png in Resources */,
 				1433401C1B1F867700C5A2F5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +359,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$SRCROOT/$PROJECT_NAME/collectionInTableCode-Prefix.pch";
 				INFOPLIST_FILE = collectionInTableCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +371,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$SRCROOT/$PROJECT_NAME/collectionInTableCode-Prefix.pch";
 				INFOPLIST_FILE = collectionInTableCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
