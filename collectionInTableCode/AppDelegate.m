@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -19,9 +20,15 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    CGRect tableFram = [[UIScreen mainScreen] bounds];
+    
+    TableViewController *tableView = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    self.window.rootViewController = tableView;
+    
     return YES;
 }
 
