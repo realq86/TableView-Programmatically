@@ -66,6 +66,17 @@
     //self.tableView.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
     
     //tableHeaderView
+    [self setTableviewHeader];
+    
+    //tableFooterView
+    [self setTableViewFooter];
+    
+}
+
+
+#pragma mark TableView Header and Footer
+- (void) setTableviewHeader{
+    //tableHeaderView
     CGRect headerRect = CGRectMake(0, 0, 300, 50);
     UILabel *headerLabel = [[UILabel alloc] initWithFrame:headerRect];
     headerLabel.backgroundColor = [UIColor grayColor];
@@ -73,16 +84,17 @@
     headerLabel.textColor = [UIColor yellowColor];
     headerLabel.textAlignment = NSTextAlignmentCenter;
     self.tableView.tableHeaderView = headerLabel;
-    
+}
+
+- (void) setTableViewFooter{
     //tabelFooterView
-    UILabel *footerView = [[UILabel alloc] initWithFrame:headerRect];
+    CGRect footerRect = CGRectMake(0, 0, 300, 50);
+    UILabel *footerView = [[UILabel alloc] initWithFrame:footerRect];
     footerView.backgroundColor = [UIColor purpleColor];
     footerView.text = @"This is tableFooterView align Left";
     footerView.textColor = [UIColor whiteColor];
     footerView.textAlignment = NSTextAlignmentRight;
     self.tableView.tableFooterView = footerView;
-    [self.tableView reloadData];
-
 }
 
 #pragma mark - Table view data source
@@ -123,8 +135,6 @@
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell" forIndexPath:indexPath];
     
     cell.myTableCellLabel.text = @"Pariya";
-    
-    
     
     return cell;
 }
