@@ -63,7 +63,7 @@
     
     //backgroundImage of TableView
     UIImage *backgroundImage = [UIImage imageNamed:@"pic2.jpg"];
-    //self.tableView.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
     
     //tableHeaderView
     [self setTableviewHeader];
@@ -100,13 +100,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [self.model size];
 }

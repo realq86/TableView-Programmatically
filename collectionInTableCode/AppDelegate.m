@@ -23,8 +23,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    CGRect tableFram = [[UIScreen mainScreen] bounds];
-    
     TableViewController *tableView = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
     
     self.window.rootViewController = tableView;
