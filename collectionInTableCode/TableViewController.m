@@ -29,8 +29,6 @@
     self.model = [[DataModel alloc]init];
     
     //registar the table cell
-    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
-    
     UINib *nib = [UINib nibWithNibName:@"CustomTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"CustomTableViewCell"];
     [self setupTableView];
@@ -40,13 +38,13 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     
+    //Add random elements into the data Model
     [self.model startUp];
     [self.model add:@"0"];
     [self.model add:@"1"];
     [self.model add:@"2"];
     [self.model add:@"3"];
 
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +55,8 @@
 #pragma mark TableView setup
 - (void) setupTableView{
     
+    
+    //TableView setup.  Just copied from Apple's TableView Doc's properties
     self.tableView.rowHeight = 100;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor redColor];
@@ -115,39 +115,40 @@
     
     // Configure the cell...
     
-    //cell.textLabel.backgroundColor = [UIColor grayColor];
-    //cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.textLabel.backgroundColor = [UIColor grayColor];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     
-    //cell.textLabel.text = [self.model objectAt:(int)indexPath.row];
+    cell.textLabel.text = [self.model objectAt:(int)indexPath.row];
     UIImage *image = [[UIImage alloc] init];
     image = [UIImage imageNamed:@"pic.JPG"];
     UIImageView *imageV = [[UIImageView alloc] initWithImage:image];
-    //imageV.clipsToBounds = YES;
+    imageV.clipsToBounds = YES;
     [cell.contentView addSubview:imageV];
-    //cell.contentView.clipsToBounds= YES;
-    //[cell.imageView initWithImage:image];
-    //cell.imageView.contentMode = UIViewContentModeScaleToFill;
-    //cell.contentView.backgroundColor = [UIColor grayColor];*/
+    cell.contentView.clipsToBounds= YES;
+    [cell.imageView initWithImage:image];
+    cell.imageView.contentMode = UIViewContentModeScaleToFill;
+    cell.contentView.backgroundColor = [UIColor grayColor];*/
     
-    
+    //Custom Cell Configure
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell" forIndexPath:indexPath];
     
-    cell.myTableCellLabel.text = @"Pariya";
+    cell.myTableCellLabel.text = [NSString stringWithFormat:@"Cell %@", [self.model objectAt:indexPath.row]];
     
     return cell;
 }
 
-/*- (void) tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{
-    //this method enables swip to delete.  No action is needed at this time.
-}*/
+- (void) tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{
+    //this method enables swip to delete.  No action is needed at this time.  CommitEditingStyle also needs to be implemented to work
+    
+}
 
-/*- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if(editingStyle == UITableViewCellEditingStyleDelete){
         [self.model removeAt:(int)indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
-}*/
+}
 
 
 /*

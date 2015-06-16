@@ -16,18 +16,24 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="HgT-6I-MJh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnI-wn-ZEJ">
-                        <rect key="frame" x="131" y="11" width="59" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnI-wn-ZEJ">
+                        <rect key="frame" x="65" y="5" width="191" height="33"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="bpz-W2-AAI"/>
+                            <constraint firstAttribute="width" constant="191" id="na1-Wh-rvW"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
+                        <color key="highlightedColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="HgT-6I-MJh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4mG-nk-nKV"/>
                     <constraint firstAttribute="trailing" secondItem="HgT-6I-MJh" secondAttribute="trailing" id="636-ge-2Sq"/>
                     <constraint firstItem="HgT-6I-MJh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ien-dw-G0d"/>
+                    <constraint firstAttribute="centerX" secondItem="jnI-wn-ZEJ" secondAttribute="centerX" id="e2j-Fi-Bvv"/>
+                    <constraint firstAttribute="centerY" secondItem="jnI-wn-ZEJ" secondAttribute="centerY" id="qPO-Io-ciF"/>
                     <constraint firstAttribute="bottom" secondItem="HgT-6I-MJh" secondAttribute="bottom" id="uGW-3c-wen"/>
                 </constraints>
             </tableViewCellContentView>
