@@ -14,8 +14,6 @@
 
 @implementation TableViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -32,8 +30,6 @@
     UINib *nib = [UINib nibWithNibName:@"CustomTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"CustomTableViewCell"];
     [self setupTableView];
-    
-
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -44,7 +40,6 @@
     [self.model add:@"1"];
     [self.model add:@"2"];
     [self.model add:@"3"];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,7 +49,6 @@
 
 #pragma mark TableView setup
 - (void) setupTableView{
-    
     
     //TableView setup.  Just copied from Apple's TableView Doc's properties
     self.tableView.rowHeight = 100;
@@ -70,12 +64,12 @@
     
     //tableFooterView
     [self setTableViewFooter];
-    
 }
 
 
 #pragma mark TableView Header and Footer
 - (void) setTableviewHeader{
+    
     //tableHeaderView
     CGRect headerRect = CGRectMake(0, 0, 300, 50);
     UILabel *headerLabel = [[UILabel alloc] initWithFrame:headerRect];
@@ -87,6 +81,7 @@
 }
 
 - (void) setTableViewFooter{
+    
     //tabelFooterView
     CGRect footerRect = CGRectMake(0, 0, 300, 50);
     UILabel *footerView = [[UILabel alloc] initWithFrame:footerRect];
